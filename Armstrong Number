@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Armstrong {
+	public static void main(String[] args) {
+		System.out.println("Enter Number : ");
+		Scanner sc = new Scanner(System.in);
+		int num = sc.nextInt(),temp = num,duplicate=num;
+		int count=0,sum=0;
+		while(num>0)
+		{
+			num=num/10;//counting numbers
+			count++;
+		}
+		while(temp>0)
+		{
+			int rem=temp%10;//extracting the last digit
+			int mul=1;
+			for(int i=1;i<=count;i++)
+			{
+				mul=mul*rem;
+			}
+			sum=sum+mul;
+			temp=temp/10;
+		}
+		String ArmStrong =(duplicate==sum)?"Number is Armstrong :" + sum :"Number is not Armstrong" + sum;
+		System.out.println(ArmStrong);
+	}
+}
