@@ -1,1 +1,3 @@
-# Java-programs
+# Armstrong numbers 
+# Strong numbers 
+# Palindrome Number
