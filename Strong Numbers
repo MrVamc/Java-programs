@@ -1,0 +1,29 @@
+package programs;
+import java.util.Scanner;
+
+public class Strong {
+	public static void main(String[] args) {
+		System.out.println("Enter Number : ");
+		Scanner s = new Scanner(System.in);
+		int num =s.nextInt(), temp=num,sum=0;
+		while(temp>0)
+		{
+			int reminder = temp%10;//extracting last digit
+			int multiple=1;
+			for(int i=1;i<=reminder;i++)
+			{
+				multiple = multiple*i;//finding factorial
+			}
+			sum=sum+multiple;//summing up the numbers 
+			temp=temp/10;
+		}
+	 String sc =(num==sum)? "It is Strong Number":"It is not Strong Number";//Turnary operator
+	 System.out.println(sc);
+		/* using if condition
+		 * if(num==sum) { System.out.println("Strong Number"); } else {
+		 * System.out.println("Not Strong Number"); }
+		 */
+
+	}
+
+}
