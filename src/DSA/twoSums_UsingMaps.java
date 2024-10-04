@@ -18,7 +18,7 @@ public class twoSums_UsingMaps {
 		for(int i = 0; i < num.length; i++) {
 			int complement = target - num[i];
 			if(m.containsKey(complement)) {
-				return new int[] {m.get(complement),i};
+				return new int[] {m.get(complement ),i};
 			}
 			m.put(num[i], i);
 		}
